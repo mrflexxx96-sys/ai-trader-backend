@@ -10,13 +10,9 @@ def home():
 
 @app.route("/analyze")
 def analyze():
-    result = {
+    return jsonify({
         "trend": "Bullish",
         "sentiment": "Positive",
         "summary": "Market momentum is strong.",
         "probability_up": "68%"
-    }
-    return jsonify(result)
-
-if __name__ == "__main__":
-    app.run()
+    })
